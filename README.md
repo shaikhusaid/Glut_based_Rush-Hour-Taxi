@@ -1,61 +1,105 @@
-🚦 Rush Hour 2D
+# 🚦 Rush Hour 2D
 
-A chaotic battle of traffic, speed, and strategy — built in C++ with GLUT/OpenGL
+**Rush Hour 2D** is a fast-paced traffic management and delivery simulation game written in **C++ with OpenGL/GLUT**.
+It blends **strategy, chaos, and reflexes** into a colorful arcade-style challenge.
 
+You’re either the **master of traffic lights** or the **delivery driver racing against time** — but in both cases, your choices decide if the city thrives or collapses into chaos.
 
+---
 
+## 🌟 Highlights
 
+* 🎮 **Two Distinct Game Modes**
 
+  * **Traffic Controller** → Manage roads, prevent crashes, and keep the city safe.
+  * **Delivery Driver** → Pick up jobs, conserve fuel, dodge traffic, and deliver packages.
 
-🎮 Game Overview
+* 🔄 **Dynamic Gameplay**
 
-Rush Hour 2D is a traffic-inspired arcade game where players take on two distinct roles:
+  * Randomized jobs and destinations.
+  * Cars spawn at unpredictable locations.
+  * No two playthroughs feel the same.
 
-🏎️ Traffic Controller — Keep the roads safe by stopping reckless drivers and managing traffic chaos.
+* 🛢️ **Petrol System**
 
-🚚 Delivery Driver — Complete deliveries across the city while dodging other cars, conserving petrol, and racing against time.
+  * Fuel is limited! Use it wisely, or your run ends.
 
-Every game is different — random jobs, dynamic car spawns, and leaderboard competition keep you on your toes.
+* 🏆 **Leaderboard**
 
-✨ Features
+  * Persistent scores saved in `leaderboard.txt`.
+  * Compete with yourself and friends for the highest score.
 
-✔️ Dual Gameplay Modes (Traffic Control & Delivery Driver)
-✔️ Randomized jobs and destinations
-✔️ Petrol management system (don’t run out of fuel!)
-✔️ Leaderboard (tracks top scorers across sessions)
-✔️ Dynamic obstacles & vehicle spawns
-✔️ Sound integration with mpg123
-✔️ Colorful 2D graphics rendered with GLUT/OpenGL
+* 🔊 **Sound Support**
 
-🎮 Controls
-Key	Action
-w a s d	Move player vehicle
-d (in menu)	Choose Delivery Driver
-t (in menu)	Choose Traffic Controller
-space	Deliver job
-o	Quit game
-p	Resume game
-Escape	Return to main menu
-+ -	Adjust petrol
-📂 Project Structure
+  * Powered by **mpg123** for background music and sound effects.
+
+* 🎨 **Graphics**
+
+  * Clean 2D rendering with OpenGL & GLUT.
+  * Bright and engaging visuals for every object.
+
+---
+
+## 🖥️ Demo Flow
+
+1. **Startup Screen** → Enter your name → Select role:
+
+   * Press **`d`** for Delivery Driver
+   * Press **`t`** for Traffic Controller
+
+2. **Gameplay** →
+
+   * Control your vehicle with **`WASD`**
+   * Manage jobs/deliveries or control cars
+   * Watch your petrol and score
+
+3. **Endgame** →
+
+   * Your score is saved
+   * Leaderboard updated automatically
+
+---
+
+## 🎮 Controls
+
+| Key             | Action                           |
+| --------------- | -------------------------------- |
+| `w` `a` `s` `d` | Move player vehicle              |
+| `space`         | Deliver job (Delivery Mode)      |
+| `+` `-`         | Adjust petrol                    |
+| `o`             | Quit game                        |
+| `p`             | Resume game                      |
+| `Escape`        | Return to menu                   |
+| `d`             | Choose Delivery Driver (Menu)    |
+| `t`             | Choose Traffic Controller (Menu) |
+
+---
+
+## 📂 File Structure
+
+```
 RushHour2D/
-│── util.h                # Drawing utilities (circles, shapes, etc.)
-│── main.cpp              # Main game logic
+│── main.cpp              # Main game loop & logic
+│── util.h                # Utility functions for graphics (shapes, drawing)
 │── leaderboard.txt        # Persistent high scores
-│── /assets                # Images, sounds
-│── /build                 # Compiled output
+│── assets/               # Sounds, images, textures (if any)
+│── build/                # Compiled output
+```
 
-🛠️ Installation & Run
-Requirements
+---
 
-C++ Compiler (g++, clang++, or MSVC)
+## 🛠️ Installation
 
-OpenGL & GLUT libraries
+### Dependencies
 
-mpg123 (for sound playback)
+* **C++ Compiler** (g++, clang++, or MSVC)
+* **OpenGL** & **GLUT**
+* **mpg123** (for audio)
 
-Run Instructions
-# Clone repo
+### Build & Run
+
+```bash
+# Clone the repository
 git clone https://github.com/your-username/RushHour2D.git
 cd RushHour2D
 
@@ -64,31 +108,63 @@ g++ main.cpp -lGL -lGLU -lglut -lmpg123 -o RushHour2D
 
 # Run
 ./RushHour2D
+```
 
-🏆 Leaderboard
+---
 
-Your progress is saved in leaderboard.txt. The format is:
+## 🏆 Leaderboard
 
+Scores are automatically stored in `leaderboard.txt`.
+
+**Format:**
+
+```
 Player: Usaid  Score: 1200
 Player: Ahmed  Score: 950
+Player: Saram  Score: 870
+```
 
+The system sorts scores, so only the best remain at the top.
 
-The game automatically sorts scores so only the best players climb to the top.
+---
 
-📸 Screenshots (Optional)
+## 📸 Screenshots & Preview
 
-(Add when you take some in-game shots)
+*(Add game screenshots or GIFs here — menu, gameplay, leaderboard, etc.)*
 
-🚀 Future Enhancements
+---
 
-Smarter AI cars
+## 🚀 Roadmap / Future Ideas
 
-Power-ups & penalties
+* Smarter AI traffic behavior
+* Power-ups (extra fuel, time boosts)
+* More diverse maps
+* Weather effects (rain/night mode)
+* Multiplayer (LAN or online)
 
-Multiplayer mode
+---
 
-Better UI/UX menus
+## 🤝 Contributing
 
-🤝 Contributing
+Want to improve **Rush Hour 2D**?
 
-PRs are welcome! If you’d like to add a feature, fix bugs, or improve performance, feel free to fork and send a pull request.
+* Fork the repo
+* Create a feature branch
+* Submit a Pull Request
+
+---
+
+## 📜 License
+
+This project is open-source and licensed under the **MIT License**.
+
+---
+
+## 💡 Behind the Scenes
+
+This game was built as a **university-level project** to explore:
+
+* Core **C++ programming** concepts (operators, file handling, classes)
+* **Graphics programming** using OpenGL/GLUT
+* Managing **state machines** for menus/gameplay
+* Designing with **object-oriented thinking** (vehicles, jobs, players)
